@@ -1,18 +1,19 @@
 import pygame
 
 class Player():
-    def __init__(self, x, y, maze):
+    def __init__(self, x, y,min_x, max_x, color):
         self.x = x
         self.y = y
         self.cell_size = 40
-        self.player_color = (255, 0, 0)
-        # self.walkable_squares = [6,7]
+        self.player_color = color
+        self.min_x = min_x
+        self.max_x = max_x
 
     def move(self, dx, dy):
         new_x = self.x + dx
         new_y = self.y + dy
 # check if square your trying to go to is in maze perimeter and not a wall and sets self xy there
-        if 0 <= new_x < 20 and 0 <= new_y < 20: #and self.maze[new_y][new_x] in self.walkable_squares:
+        if self.min_x <= new_x < self.max_x and 0 <= new_y < 20:
             self.x = new_x
             self.y = new_y
 

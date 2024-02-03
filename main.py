@@ -8,7 +8,7 @@ from game import Game
 pygame.init()
 
 # set screen dimensions
-screen = pygame.display.set_mode((1600, 800), pygame.FULLSCREEN | pygame.SCALED)
+screen = pygame.display.set_mode((1600, 800))
 
 # create and store all possible screens
 states = {

@@ -6,8 +6,8 @@ class Gameplay(BaseState):
     def __init__(self):
         super(Gameplay, self).__init__()
         
-        self.player1 = Player(x=0, y=0, min_x=0, max_x=19, color=(255, 0, 0))
-        self.player2 = Player(x=20, y=0, min_x=20, max_x=39, color=(0, 255, 0))
+        self.player1 = Player(x=0, y=0, min_x=0, max_x=19, color=(255, 0, 0), player_number=1)
+        self.player2 = Player(x=20, y=0, min_x=20, max_x=39, color=(0, 255, 0), player_number=2)
         self.player_speed = .01  
         self.player1_moving = {'up': False, 'down': False, 'left': False, 'right': False}
         self.player2_moving = {'up': False, 'down': False, 'left': False, 'right': False}

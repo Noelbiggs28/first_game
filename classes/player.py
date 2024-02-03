@@ -1,14 +1,15 @@
 import pygame
 
 class Player():
-    def __init__(self, x, y,min_x, max_x, color):
+    def __init__(self, x, y,min_x, max_x, color, player_number):
         self.x = x
         self.y = y
         self.cell_size = 40
         self.player_color = color
         self.min_x = min_x
         self.max_x = max_x
-
+        self.player_image = pygame.image.load("images/firstgame.png") if player_number == 1 else pygame.image.load("images/images.png")
+        
     def move(self, dx, dy):
         new_x = self.x + dx
         new_y = self.y + dy
@@ -20,6 +21,6 @@ class Player():
 # draws player
     def draw(self, surface):
         if self.x >= 0 and self.y >= 0:
-            player_rect = pygame.Rect(self.x * self.cell_size, self.y * self.cell_size, self.cell_size, self.cell_size)
-            pygame.draw.rect(surface, self.player_color, player_rect)
-            # surface.blit(self.player_image, (self.x * self.cell_size, self.y * self.cell_size))
+            #player_rect = pygame.Rect(self.x * self.cell_size, self.y * self.cell_size, self.cell_size, self.cell_size)
+            #pygame.draw.rect(surface, self.player_color, player_rect)
+            surface.blit(self.player_image, (self.x * self.cell_size, self.y * self.cell_size))

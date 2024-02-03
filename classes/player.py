@@ -13,7 +13,7 @@ class Player():
         new_x = self.x + dx
         new_y = self.y + dy
 # check if square your trying to go to is in maze perimeter and not a wall and sets self xy there
-        if self.min_x <= new_x < self.max_x and 0 <= new_y < 20:
+        if self.min_x <= new_x < self.max_x and 0 <= new_y < 19:
             self.x = new_x
             self.y = new_y
 

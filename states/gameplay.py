@@ -6,8 +6,8 @@ class Gameplay(BaseState):
     def __init__(self):
         super(Gameplay, self).__init__()
         
-        self.player1 = Player(0, 0, 0, 20, (255, 0, 0))
-        self.player2 = Player(20, 0, 20, 40, (0, 255, 0))
+        self.player1 = Player(x=0, y=0, min_x=0, max_x=19, color=(255, 0, 0))
+        self.player2 = Player(x=20, y=0, min_x=20, max_x=39, color=(0, 255, 0))
         self.player_speed = .01  
         self.player1_moving = {'up': False, 'down': False, 'left': False, 'right': False}
         self.player2_moving = {'up': False, 'down': False, 'left': False, 'right': False}
@@ -41,23 +41,23 @@ class Gameplay(BaseState):
             # Player 1 buttons
             if event.key == K_w:
                 self.player1_moving['up'] = True
-            elif event.key == K_s:
+            if event.key == K_s:
                 self.player1_moving['down'] = True
-            elif event.key == K_a:
+            if event.key == K_a:
                 self.player1_moving['left'] = True
-            elif event.key == K_d:
+            if event.key == K_d:
                 self.player1_moving['right'] = True
             # player 2 buttons
-            elif event.key == K_UP:
+            if event.key == K_UP:
                 self.player2_moving['up'] = True
                 print('up')
-            elif event.key == K_DOWN:
+            if event.key == K_DOWN:
                 self.player2_moving['down'] = True
                 print('down')
-            elif event.key == K_LEFT:
+            if event.key == K_LEFT:
                 self.player2_moving['left'] = True
                 print('left')
-            elif event.key == K_RIGHT:
+            if event.key == K_RIGHT:
                 self.player2_moving['right'] = True
                 print('right')
 
@@ -65,23 +65,24 @@ class Gameplay(BaseState):
         # player 1 updates
         if self.player1_moving['up']:
             self.player1.move(0, -self.player_speed * dt)
-        elif self.player1_moving['down']:
+        if self.player1_moving['down']:
             self.player1.move(0, self.player_speed * dt)
-        elif self.player1_moving['left']:
+        if self.player1_moving['left']:
             self.player1.move(-self.player_speed * dt, 0)
-        elif self.player1_moving['right']:
+        if self.player1_moving['right']:
             self.player1.move(self.player_speed * dt, 0)
         # player 2 updates
-        elif self.player2_moving['up']:
+        if self.player2_moving['up']:
             self.player2.move(0, -self.player_speed * dt)
-        elif self.player2_moving['down']:
+        if self.player2_moving['down']:
             self.player2.move(0, self.player_speed * dt)
-        elif self.player2_moving['left']:
+        if self.player2_moving['left']:
             self.player2.move(-self.player_speed * dt, 0)
-        elif self.player2_moving['right']:
+        if self.player2_moving['right']:
             self.player2.move(self.player_speed * dt, 0)
 
 
     def draw(self, surface):
+        surface.fill((0, 0, 0))
         self.player1.draw(surface)
         self.player2.draw(surface)

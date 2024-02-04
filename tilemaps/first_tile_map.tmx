@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
  <tileset firstgid="1" source="../tile_set/town_tileset.tsx"/>
- <tileset firstgid="46" source="../../../tilesets/LavaTileset.tsx"/>
+ <tileset firstgid="46" source="../tile_set/LavaTileset.tsx"/>
  <tileset firstgid="136" source="../tile_set/techDungeon.tsx"/>
  <layer id="1" name="Tile Layer 1" width="40" height="20">
   <data encoding="csv">

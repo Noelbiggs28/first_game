@@ -4,11 +4,11 @@ class Player():
     def __init__(self, x, y,min_x, max_x, color, player_number):
         self.x = x
         self.y = y
-        self.cell_size = 40
+        self.cell_size = 32
         self.player_color = color
         self.min_x = min_x
         self.max_x = max_x
-        self.player_image = pygame.image.load("images/firstgame.png") if player_number == 1 else pygame.image.load("images/images.png")
+        self.player_image = pygame.image.load("images/player1_tiny.png") if player_number == 1 else pygame.image.load("images/player2_tiny.png")
         
     def move(self, dx, dy):
         new_x = self.x + dx

@@ -67,22 +67,22 @@ class Gameplay(BaseState):
     def update(self, dt):
         # player 1 updates
         if self.player1_moving['up']:
-            self.player1.move(0, -.1)
+            self.player1.move(0, -.3)
         if self.player1_moving['down']:
-            self.player1.move(0, .1)
+            self.player1.move(0, .3)
         if self.player1_moving['left']:
-            self.player1.move(-.1, 0)
+            self.player1.move(-.3, 0)
         if self.player1_moving['right']:
-            self.player1.move(.1, 0)
+            self.player1.move(.3, 0)
         # player 2 updates
         if self.player2_moving['up']:
-            self.player2.move(0, -.1)
+            self.player2.move(0, -.3)
         if self.player2_moving['down']:
-            self.player2.move(0, .1)
+            self.player2.move(0, .3)
         if self.player2_moving['left']:
-            self.player2.move(-.1, 0)
+            self.player2.move(-.3, 0)
         if self.player2_moving['right']:
-            self.player2.move(.1, 0)
+            self.player2.move(.3, 0)
 
 
     def draw(self, surface):

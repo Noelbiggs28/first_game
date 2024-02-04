@@ -13,10 +13,10 @@ class Player():
         new_y = self.y + dy
         # next_x = self.x + dx*32
         # next_y = self.y + dx*32
-        next_square = get_tile_properties("tilemaps/first_tile_map.tmx",new_x,new_y)
-
+        next_square = get_tile_properties("tilemaps/full_screen_tile_map.tmx",new_x,new_y)
+        print(next_square)
 # check if square your trying to go to is in maze perimeter and not a wall and sets self xy there
-        if 0 <= new_x < 40 and 0 <= new_y < 20 and next_square['wall']==0:
+        if 0 <= new_x < 45 and 0 <= new_y < 30 and next_square['wall']==0:
             self.x = new_x
             self.y = new_y
 # draws player

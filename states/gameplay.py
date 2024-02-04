@@ -87,7 +87,7 @@ class Gameplay(BaseState):
 
     def draw(self, surface):
         surface.fill((0, 0, 0))
-        draw_tile_map("tilemaps/first_tile_map.tmx")
+        draw_tile_map("tilemaps/full_screen_tile_map.tmx")
         self.player1.draw(surface)
         self.player2.draw(surface)
         pygame.display.flip()

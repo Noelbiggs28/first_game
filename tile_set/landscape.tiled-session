@@ -1,4 +1,8 @@
 {
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
     "activeFile": "techDungeon.tsx",
     "expandedProjectPaths": [
     ],
@@ -7,8 +11,16 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 846.6666666666665,
+                "x": 333.33333333333326,
                 "y": 300
+            }
+        },
+        "/Users/noelbiggs/VSC/projects/first_game/tilemaps/full_screen_tile_map.tmx": {
+            "scale": 0.43,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 474.41860465116287,
+                "y": 751.1627906976745
             }
         },
         "/Users/noelbiggs/VSC/tilesets/LavaTileset.tsx": {
@@ -27,6 +39,9 @@
             "scaleInEditor": 0.55
         }
     },
+    "map.height": 28,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 50,
     "openFiles": [
         "town_tileset.tsx",
         "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx",

@@ -15,6 +15,7 @@
     "openFiles": [
     ],
     "project": "landscape.tiled-project",
+    "property.type": "int",
     "recentFiles": [
         "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx"
     ]

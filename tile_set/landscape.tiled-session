@@ -1,5 +1,5 @@
 {
-    "activeFile": "",
+    "activeFile": "techDungeon.tsx",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -7,16 +7,38 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 570,
-                "y": 377.33333333333337
+                "x": 846.6666666666665,
+                "y": 300
             }
+        },
+        "/Users/noelbiggs/VSC/tilesets/LavaTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "LavaTileset.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 0.55
+        },
+        "techDungeon.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 0.55
+        },
+        "town_tileset.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 0.55
         }
     },
     "openFiles": [
+        "town_tileset.tsx",
+        "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx",
+        "LavaTileset.tsx",
+        "techDungeon.tsx"
     ],
     "project": "landscape.tiled-project",
     "property.type": "int",
     "recentFiles": [
-        "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx"
+        "town_tileset.tsx",
+        "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx",
+        "LavaTileset.tsx",
+        "techDungeon.tsx"
     ]
 }

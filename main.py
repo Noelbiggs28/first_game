@@ -8,8 +8,8 @@ from game import Game
 pygame.init()
 
 # set screen dimensions
-screen = pygame.display.set_mode((1280, 640))
-# screen = pygame.display.set_mode((2560, 1600), pygame.FULLSCREEN | pygame.SCALE)
+# screen = pygame.display.set_mode((1600, 896))
+screen = pygame.display.set_mode((1600, 896), pygame.FULLSCREEN | pygame.SCALED)
 # create and store all possible screens
 states = {
     "MENU": Menu(),

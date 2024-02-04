@@ -10,7 +10,7 @@ class Gameplay(BaseState):
         
         self.player1 = Player(x=10, y=10, color=(255, 0, 0), player_number=1)
         self.player2 = Player(x=30, y=10, color=(0, 255, 0), player_number=2)
-        self.player_speed = .006  
+        self.player_speed = .01  
         self.player1_moving = {'up': False, 'down': False, 'left': False, 'right': False}
         self.player2_moving = {'up': False, 'down': False, 'left': False, 'right': False}
 
@@ -67,27 +67,27 @@ class Gameplay(BaseState):
     def update(self, dt):
         # player 1 updates
         if self.player1_moving['up']:
-            self.player1.move(0, -self.player_speed * dt)
+            self.player1.move(0, -.2)
         if self.player1_moving['down']:
-            self.player1.move(0, self.player_speed * dt)
+            self.player1.move(0, .2)
         if self.player1_moving['left']:
-            self.player1.move(-self.player_speed * dt, 0)
+            self.player1.move(-.2, 0)
         if self.player1_moving['right']:
-            self.player1.move(self.player_speed * dt, 0)
+            self.player1.move(.2, 0)
         # player 2 updates
         if self.player2_moving['up']:
-            self.player2.move(0, -self.player_speed * dt)
+            self.player2.move(0, -.2)
         if self.player2_moving['down']:
-            self.player2.move(0, self.player_speed * dt)
+            self.player2.move(0, .2)
         if self.player2_moving['left']:
-            self.player2.move(-self.player_speed * dt, 0)
+            self.player2.move(-.2, 0)
         if self.player2_moving['right']:
-            self.player2.move(self.player_speed * dt, 0)
+            self.player2.move(.2, 0)
 
 
     def draw(self, surface):
         surface.fill((0, 0, 0))
-        draw_tile_map("tilemaps/first_tile_map.tmx")
+        # draw_tile_map("tilemaps/first_tile_map.tmx")
         self.player1.draw(surface)
         self.player2.draw(surface)
         pygame.display.flip()

@@ -1,0 +1,21 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 570,
+                "y": 377.33333333333337
+            }
+        }
+    },
+    "openFiles": [
+    ],
+    "project": "landscape.tiled-project",
+    "recentFiles": [
+        "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx"
+    ]
+}

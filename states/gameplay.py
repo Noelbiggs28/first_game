@@ -3,12 +3,13 @@ from pygame.locals import *
 from classes.player import Player
 from .basestate import BaseState
 from classes.tile_map_loader import draw_tile_map
+
 class Gameplay(BaseState):
     def __init__(self):
         super(Gameplay, self).__init__()
         
-        self.player1 = Player(x=10, y=10, min_x=0, max_x=19, color=(255, 0, 0), player_number=1)
-        self.player2 = Player(x=30, y=10, min_x=20, max_x=39, color=(0, 255, 0), player_number=2)
+        self.player1 = Player(x=10, y=10, color=(255, 0, 0), player_number=1)
+        self.player2 = Player(x=30, y=10, color=(0, 255, 0), player_number=2)
         self.player_speed = .01  
         self.player1_moving = {'up': False, 'down': False, 'left': False, 'right': False}
         self.player2_moving = {'up': False, 'down': False, 'left': False, 'right': False}
@@ -42,6 +43,7 @@ class Gameplay(BaseState):
             # Player 1 buttons
             if event.key == K_w:
                 self.player1_moving['up'] = True
+                
             if event.key == K_s:
                 self.player1_moving['down'] = True
             if event.key == K_a:

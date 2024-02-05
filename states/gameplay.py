@@ -2,12 +2,12 @@ import pygame
 from pygame.locals import *
 from classes.player import Player
 from .basestate import BaseState
-from classes.tile_map_loader import draw_tile_map
+from classes.tile_map_loader import Tile_map
 
 class Gameplay(BaseState):
     def __init__(self):
         super(Gameplay, self).__init__()
-        
+        self.tile_map = Tile_map("tilemaps/full_screen_tile_map.tmx")
         self.player1 = Player(x=10, y=10, color=(255, 0, 0), player_number=1)
         self.player2 = Player(x=30, y=10, color=(0, 255, 0), player_number=2)
         self.player_speed = .01  
@@ -87,7 +87,7 @@ class Gameplay(BaseState):
 
     def draw(self, surface):
         surface.fill((0, 0, 0))
-        draw_tile_map("tilemaps/full_screen_tile_map.tmx")
+        self.tile_map.draw_tile_map()
         self.player1.draw(surface)
         self.player2.draw(surface)
         pygame.display.flip()

@@ -7,6 +7,8 @@ from game import Game
 
 pygame.init()
 
+
+clientNumber = 0
 # set screen dimensions
 screen = pygame.display.set_mode((1600, 896))
 # screen = pygame.display.set_mode((1600, 896), pygame.FULLSCREEN | pygame.SCALED)

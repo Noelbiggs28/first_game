@@ -1,7 +1,8 @@
 import pygame
-from classes.tile_map_loader import get_tile_properties
+from .tile_map_loader import Tile_map
 class Player():
     def __init__(self, x, y,color, player_number):
+        self.tile_map = Tile_map("tilemaps/full_screen_tile_map.tmx")
         self.x = x
         self.y = y
         self.cell_size = 32
@@ -13,7 +14,7 @@ class Player():
         new_y = self.y + dy
         # next_x = self.x + dx*32
         # next_y = self.y + dx*32
-        next_square = get_tile_properties("tilemaps/full_screen_tile_map.tmx",new_x,new_y)
+        next_square = self.tile_map.get_tile_properties(new_x,new_y)
         print(next_square)
 # check if square your trying to go to is in maze perimeter and not a wall and sets self xy there
         if 0 <= new_x < 45 and 0 <= new_y < 30 and next_square['wall']==0:

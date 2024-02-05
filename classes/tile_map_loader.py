@@ -8,15 +8,15 @@ class Tile_map():
         
     def draw_tile_map(self):
         screen = pygame.display.get_surface()
-        tmx_map = load_pygame(self.map_data)
-        for layer in tmx_map.visible_layers:
+    
+        for layer in self.map_data.visible_layers:
             for x, y, image in layer.tiles():
                 screen.blit(image, (x * 32, y * 32))
 
     def get_tile_properties(self, x, y):
         
         try:
-            properties = self.map_data.get_tile_properties(x,y,0)
+            properties = self.map_data.get_tile_properties(x,y,1)
         except ValueError:
 
             properties = {"wall":0,"floor":0}

@@ -19,8 +19,8 @@
             "scale": 0.43,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 474.41860465116287,
-                "y": 751.1627906976745
+                "x": 1018.6046511627907,
+                "y": 744.186046511628
             }
         },
         "/Users/noelbiggs/VSC/tilesets/LavaTileset.tsx": {
@@ -51,8 +51,9 @@
     "project": "landscape.tiled-project",
     "property.type": "int",
     "recentFiles": [
-        "town_tileset.tsx",
         "/Users/noelbiggs/VSC/projects/first_game/tilemaps/first_tile_map.tmx",
+        "/Users/noelbiggs/VSC/projects/first_game/tilemaps/full_screen_tile_map.tmx",
+        "town_tileset.tsx",
         "LavaTileset.tsx",
         "techDungeon.tsx"
     ]

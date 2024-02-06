@@ -14,10 +14,17 @@ class Network:
         self.port = 5555
         self.addr = (self.server, self.port)
         self.pos = self.connect()
+        
        
     def getPos(self):
         return self.pos
+    
+    def read_pos(self, str):
+        str = str.split(",")
+        return int(str[0]), int(str[1])
 
+    def make_pos(self,tup):
+        return str(tup[0]) + "," + str(tup[1])
 
     def connect(self):
         try:

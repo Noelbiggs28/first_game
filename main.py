@@ -4,7 +4,7 @@ import pygame
 from states.menu import Menu
 from states.gameplay import Gameplay
 from game import Game
-
+from classes.network import Network
 pygame.init()
 
 
@@ -13,9 +13,10 @@ clientNumber = 0
 screen = pygame.display.set_mode((1600, 896))
 # screen = pygame.display.set_mode((1600, 896), pygame.FULLSCREEN | pygame.SCALED)
 # create and store all possible screens
+n = Network()
 states = {
     "MENU": Menu(),
-    "GAMEPLAY": Gameplay()
+    "GAMEPLAY": Gameplay(n)
 }
 
 # create game instance and pass in screen, all screeens, startings screen

@@ -1,12 +1,20 @@
 import socket
 import pickle
 
+import os
+from dotenv import load_dotenv
+
+
 
 class Network:
     def __init__(self):
+        load_dotenv()
+        IP = os.getenv("IPADD")
+        PORT = int(os.getenv("PORT"))
+
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server = "10.11.250.207"
-        self.port = 5555
+        self.server = IP
+        self.port = PORT
         self.addr = (self.server, self.port)
         self.p = self.connect()
 

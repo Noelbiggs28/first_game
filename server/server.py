@@ -1,6 +1,7 @@
 import socket
 from _thread import *
-import sys
+import pickle
+
 
 import os
 from dotenv import load_dotenv
@@ -9,9 +10,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 IP = os.getenv("IPADD")
-
+PORT = int(os.getenv("PORT"))
 server = IP
-port = 5555
+port = PORT
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 

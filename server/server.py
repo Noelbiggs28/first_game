@@ -25,7 +25,7 @@ print("Waiting for a connection, Server Started")
 
 def read_pos(str):
     str = str.split(",")
-    return int(str[0]), int(str[1])
+    return float(str[0]), float(str[1])
 
 
 def make_pos(tup):

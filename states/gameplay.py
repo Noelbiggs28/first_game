@@ -23,7 +23,7 @@ class Gameplay(BaseState):
         elif event.type == pygame.KEYUP:
             if event.key == K_ESCAPE:
                 self.quit = True
-        self.player1.move()
+        # self.player1.move()
         #     elif event.key == K_w:
         #         self.player1_moving['up'] = False
         #     elif event.key == K_s:
@@ -68,6 +68,7 @@ class Gameplay(BaseState):
          
 
     def update(self, dt):
+        self.player1.move()
         self.clock.tick(60)
         p2Pos = self.network.read_pos(self.network.send(self.network.make_pos((self.player1.x, self.player1.y))))
         self.player2.x = p2Pos[0]

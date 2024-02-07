@@ -10,9 +10,12 @@ class Player():
         self.rect = (x,y,width,height)
         self.vel = 3
 
+    # draws player on screen
     def draw(self, win):
         pygame.draw.rect(win, self.color, self.rect)
 
+
+    # checks if any keys were pressed and updates player 
     def move(self):
         keys = pygame.key.get_pressed()
 
@@ -30,5 +33,7 @@ class Player():
 
         self.update()
 
+
+    # updates rect for the draw function
     def update(self):
         self.rect = (self.x, self.y, self.width, self.height)

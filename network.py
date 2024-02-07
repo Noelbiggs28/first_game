@@ -18,9 +18,13 @@ class Network:
         self.addr = (self.server, self.port)
         self.p = self.connect()
 
+
+    # gets player from server and returns it to client
     def getP(self):
         return self.p
 
+
+    # connects to server and returns player info
     def connect(self):
         try:
             self.client.connect(self.addr)
@@ -28,6 +32,8 @@ class Network:
         except:
             pass
 
+    # sends data to be which is your player object.
+    # returns data on other player object
     def send(self, data):
         try:
             self.client.send(pickle.dumps(data))
